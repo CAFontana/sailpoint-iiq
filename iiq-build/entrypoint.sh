@@ -12,6 +12,10 @@ if [ -z "${MYSQL_PASSWORD}" ]
 then
 	export MYSQL_PASSWORD=secr3tPa55word
 fi
+
+# Move files from webapps.dist to webapps
+cp -r /usr/local/tomcat/webapps.dist/* /usr/local/tomcat/webapps/
+
 #wait for database to start
 echo "waiting for database on ${MYSQL_HOST} to come up"
 while ! mysqladmin ping -h"${MYSQL_HOST}" -u"${MYSQL_USER}" -p"${MYSQL_PASSWORD}" --silent ; do

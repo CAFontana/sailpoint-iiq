@@ -1,4 +1,4 @@
-FROM tomcat:jdk11-openjdk-slim
+FROM tomcat:9.0.74-jdk11
 
 MAINTAINER Steffen Sperling <steffen.sperling@ventum.com>
 
