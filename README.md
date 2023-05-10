@@ -3,20 +3,20 @@ Sailpoint Identity IQ Dockerized
 
 # Prerequisites
 
-Please note that Identity IQ is closed source so you first need to get a license for Idenity IQ and go to https://community.sailpoint.com/ to download the software. You will put the downloaded identityiq-x.y.zip into the build/src/ directory to get started.
+Please note that Identity IQ is closed source so you first need to get a license for Identity IQ and go to https://community.sailpoint.com/ to download the software. You will put the downloaded identityiq-x.y.zip and identityiq-x.ypn.jar patch into the build/src/ directory to get started.
 I provide a dummy file for demo purposes. This does not include ANY Sailpoint proprietary code and can only be used to check if this "dockerization" works.
 
 # Description
 
-OpenJDK 11 and Tomcat 9 based docker container.
+OpenJDK 11 and Tomcat 9.0.74 based docker container.
 Inspired by dodorka/tomcat
 
 Container will run in background, IIQ will be run from mounted volume. 
 
 Includes:
 
- - Oracle JDK 10 (pulling latest version automatically)
- - Tomcat 9 (maybe you need to change this to current version)
+ - Oracle JDK 11 (pulling latest version automatically)
+ - Tomcat 9.0.74 (maybe you need to change this to current version)
  - mariadb database (separate container, see docker-compose.yml
  
 ## Docker

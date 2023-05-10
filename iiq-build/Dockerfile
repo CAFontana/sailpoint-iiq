@@ -23,6 +23,9 @@ jar -xf /tmp/identityiq.war && \
 chmod +x /usr/local/tomcat/webapps/identityiq/WEB-INF/bin/iiq && \
 cd /tmp && rm identityiq.war
 
+# add IIQ patches if they exist
+COPY src/identityiq-${IIQ_VERSION}p[0-9].jar /tmp
+
 RUN mkdir /usr/local/tomcat/webapps/ROOT
 COPY index.html /usr/local/tomcat/webapps/ROOT
 
